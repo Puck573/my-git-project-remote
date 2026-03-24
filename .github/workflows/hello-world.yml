@@ -1,0 +1,28 @@
+name: Hello World Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print greeting
+        run: echo "Hello, GitHub Actions!"
+      
+      - name: Print current directory
+        run: pwd
+      
+      - name: List files
+        run: ls -la
+      
+      - name: Print environment info
+        run: |
+          echo "GitHub Actor: ${{ github.actor }}"
+          echo "GitHub Repository: ${{ github.repository }}"
+          echo "Runner OS: ${{ runner.os }}"
