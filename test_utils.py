@@ -3,7 +3,7 @@ import utils
 
 def test_is_even():
     assert utils.is_even(2) == True
-    assert utils.is_even(3) == True  # Ошибка: 3 не должно быть чётным
+    assert utils.is_even(3) == False
     assert utils.is_even(0) == True
 
 def test_generate_password():
